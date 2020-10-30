@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudDemoAPI", "CloudDemoAPI\CloudDemoAPI.csproj", "{4E751DB5-E3DC-429A-8440-8ECA0A99B086}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E751DB5-E3DC-429A-8440-8ECA0A99B086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E751DB5-E3DC-429A-8440-8ECA0A99B086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E751DB5-E3DC-429A-8440-8ECA0A99B086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E751DB5-E3DC-429A-8440-8ECA0A99B086}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B2C1C5D-788E-46D9-8B67-85145F69E3A0}
+	EndGlobalSection
+EndGlobal
