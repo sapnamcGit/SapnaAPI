@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace CloudDemoAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -24,16 +24,76 @@ namespace CloudDemoAPI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+
+        // default optional param
+        //https://localhost:44317/api/weatherforecast?includeId=true
+        //https://localhost:44317/api/weatherforecast?incldeId=true&need=true
+        public IActionResult getweather(bool includeId = false)
+        {
+            var t = includeId;
+            var rng = new Random();
+
+            if (false)
+            {
+                return BadRequest(" bad happen");
+            }
+            else
+                return Ok(Enumerable.Range(1, 5).Select(index => new WeatherForecast
+                {
+                    Date = DateTime.Now.AddDays(index),
+                    TemperatureC = rng.Next(-20, 55),
+                    Summary = Summaries[rng.Next(Summaries.Length)]
+                })
+                 .ToArray());
+        }
+
+        //[HttpGet]
+        //[Route("{Test}")]
+        //public IActionResult Test(string Test)
+        //{
+        //    var rng = new Random();
+        //    return Ok(Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        //    {
+        //        Date = DateTime.Now.AddDays(index),
+        //        TemperatureC = rng.Next(-20, 55),
+        //        Summary = Summaries[rng.Next(Summaries.Length)]
+        //    })
+        //    .ToArray());
+        //}
+
+        [HttpGet]
+        [Route("{TestInt:int}")]
+        public IActionResult Te(int TestInt)
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Ok(Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
-            .ToArray();
+            .ToArray());
         }
+
+
+        //https://localhost:44317/api/weatherforecast/search?dayBase=10/10/2020
+        [HttpGet]
+        [Route("{Search}")]
+        public IActionResult SearchBydate(DateTime dayBase, bool need = false)
+        {
+            var rng = new Random();
+            return Ok(Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            })
+            .ToArray());
+        }
+        public ActionResult Post(Enquiry enuiry)
+        {
+            var s = enuiry;
+            return Ok();
+        }   
     }
 }
