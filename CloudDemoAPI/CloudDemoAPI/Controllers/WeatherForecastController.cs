@@ -94,6 +94,26 @@ namespace CloudDemoAPI.Controllers
         {
             var s = enuiry;
             return Ok();
-        }   
+        }
+
+        //https://localhost:44317/api/weatherforecast/New/CITIES
+        [HttpGet]
+        [Route("{New}/{CITIES}")]
+        public JsonResult GetCities()
+        {
+            return new JsonResult(new  CityDataModel().Current
+        );
+        }
+
+
+        //https://localhost:44317/api/weatherforecast/New/CITIES/1
+        [HttpGet]
+        [Route("{New}/{CITIES}/{id}")]
+        public JsonResult GetCities(int id)
+        {
+            return new JsonResult(new CityDataModel().Current.Find(l => l.Id == id)
+        ); ;
+        }
+
     }
 }
