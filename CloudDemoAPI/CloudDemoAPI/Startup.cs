@@ -26,6 +26,7 @@ namespace CloudDemoAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            //services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,11 +36,15 @@ namespace CloudDemoAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler();
+            }
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+           // app.UseMvc();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
