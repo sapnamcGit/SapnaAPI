@@ -35,7 +35,7 @@ namespace CloudDemoAPI.Controllers
 
             if (false)
             {
-                return BadRequest(" bad happen");
+                //return BadRequest(" bad happen");
             }
             else
                 return Ok(Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -101,7 +101,7 @@ namespace CloudDemoAPI.Controllers
         [Route("{New}/{CITIES}")]
         public JsonResult GetCities()
         {
-            return new JsonResult(new  CityDataModel().Current
+            return new JsonResult( CityDataStore.Current._cities
         );
         }
 
@@ -109,10 +109,15 @@ namespace CloudDemoAPI.Controllers
         //https://localhost:44317/api/weatherforecast/New/CITIES/1
         [HttpGet]
         [Route("{New}/{CITIES}/{id}")]
-        public JsonResult GetCities(int id)
+        public ActionResult GetCities(int id)
         {
-            return new JsonResult(new CityDataModel().Current.Find(l => l.Id == id)
-        ); ;
+            var res = CityDataStore.Current._cities.FirstOrDefault(l => l.Id == id);
+            if (res==null)
+                {
+                return NotFound();
+            }
+
+            return Ok(res);
         }
 
     }

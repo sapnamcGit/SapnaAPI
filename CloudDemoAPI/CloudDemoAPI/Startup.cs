@@ -38,7 +38,8 @@ namespace CloudDemoAPI
             }
             else
             {
-                app.UseExceptionHandler();
+                app.UseExceptionHandler("/error");
+                app.UseEndpoints(endpoints => endpoints.MapControllers());
             }
 
             app.UseHttpsRedirection();
