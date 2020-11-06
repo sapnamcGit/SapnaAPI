@@ -25,7 +25,9 @@ namespace CloudDemoAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+
+            // This is to add xml capability to API .Test using Accept - aplication /xml 
+            services.AddControllers().AddXmlSerializerFormatters();
             //services.AddMvc();
         }
 

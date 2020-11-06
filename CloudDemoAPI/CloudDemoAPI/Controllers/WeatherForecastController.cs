@@ -28,7 +28,8 @@ namespace CloudDemoAPI.Controllers
         // default optional param
         //https://localhost:44317/api/weatherforecast?includeId=true
         //https://localhost:44317/api/weatherforecast?incldeId=true&need=true
-        public IActionResult getweather(bool includeId = false)
+        // This is an example of XML and Jason based results 
+        public IEnumerable<WeatherForecast> getweather(bool includeId = false)
         {
             var t = includeId;
             var rng = new Random();
@@ -38,13 +39,13 @@ namespace CloudDemoAPI.Controllers
                 //return BadRequest(" bad happen");
             }
             else
-                return Ok(Enumerable.Range(1, 5).Select(index => new WeatherForecast
+                return Enumerable.Range(1, 5).Select(index => new WeatherForecast
                 {
                     Date = DateTime.Now.AddDays(index),
                     TemperatureC = rng.Next(-20, 55),
                     Summary = Summaries[rng.Next(Summaries.Length)]
-                })
-                 .ToArray());
+                }).ToArray();
+                 
         }
 
         //[HttpGet]
