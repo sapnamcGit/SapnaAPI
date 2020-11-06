@@ -1,0 +1,6 @@
+/build/
+*.suo
+bin/
+obj/
+Debug/
+Release/
