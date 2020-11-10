@@ -18,3 +18,4 @@ C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.pdb
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.genruntimeconfig.cache
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.csprojAssemblyReference.cache
+C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\bin\Debug\netcoreapp3.1\appsettings.Production.json

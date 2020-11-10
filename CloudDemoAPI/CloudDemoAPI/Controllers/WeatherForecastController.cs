@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CloudDemoAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -17,10 +18,12 @@ namespace CloudDemoAPI.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IMailService _mailService;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IMailService service)
         {
             _logger = logger;
+            _mailService = service;
         }
 
         [HttpGet]
@@ -31,9 +34,12 @@ namespace CloudDemoAPI.Controllers
         // This is an example of XML and Jason based results 
         public IEnumerable<WeatherForecast> getweather(bool includeId = false)
         {
+            //Check in output window for loging at debug time
+            _logger.LogInformation("started logging; getweather ");
             var t = includeId;
             var rng = new Random();
 
+            _mailService.Sendmail();
             if (false)
             {
                 //return BadRequest(" bad happen");
@@ -45,7 +51,7 @@ namespace CloudDemoAPI.Controllers
                     TemperatureC = rng.Next(-20, 55),
                     Summary = Summaries[rng.Next(Summaries.Length)]
                 }).ToArray();
-                 
+
         }
 
         //[HttpGet]
