@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CloudDemoAPI.EntityData;
 using CloudDemoAPI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +31,7 @@ namespace CloudDemoAPI
             // This is to add xml capability to API .Test using Accept - aplication /xml 
             services.AddControllers().AddXmlSerializerFormatters();
             services.AddTransient<IMailService, MailService>();
+            services.AddDbContext<SQLiteDBContext>();
             //services.AddMvc();
         }
 
