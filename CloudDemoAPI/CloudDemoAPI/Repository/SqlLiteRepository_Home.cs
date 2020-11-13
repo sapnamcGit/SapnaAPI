@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace CloudDemoAPI.Repository
 {
+    /// <summary>
+    /// no duplication, less erro-prone code, better testability 
+    /// an abstarction reduces complexity and aims to make the code safe for repository imlemntation
+    /// Persistentence  ignorant 
+    /// which persistent method to use for a specific method on the repsositry, entity , ADO . or from API
+    /// Consumer need not know where it is called .they only need te method call
+    /// </summary>
     public interface ISqlLiteRepository_Home
     {
         void adddata_Employee();
@@ -18,8 +25,7 @@ namespace CloudDemoAPI.Repository
 
         public SqlLiteRepository_Home(SQLiteDBContext dbCon)
         {
-            _Sqllitedb = dbCon;
-
+            _Sqllitedb = dbCon ?? throw new ArgumentNullException(nameof(_Sqllitedb));
 
         }
         // Call this only to seed the DB first time

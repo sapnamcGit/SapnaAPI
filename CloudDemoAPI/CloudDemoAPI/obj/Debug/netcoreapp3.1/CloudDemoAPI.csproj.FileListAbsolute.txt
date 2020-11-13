@@ -49,8 +49,11 @@ C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\bin\Debug\netcoreapp3.1
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.csprojAssemblyReference.cache
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.AssemblyInfoInputs.cache
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.AssemblyInfo.cs
+C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.csproj.CoreCompileInputs.cache
+C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.RazorTargetAssemblyInfo.cache
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.csproj.CopyComplete
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\staticwebassets\CloudDemoAPI.StaticWebAssets.Manifest.cache
@@ -58,6 +61,3 @@ C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.dll
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.pdb
 C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.genruntimeconfig.cache
-C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.csprojAssemblyReference.cache
-C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.csproj.CoreCompileInputs.cache
-C:\Sapna\API Projects\SapnaAPI\CloudDemoAPI\CloudDemoAPI\obj\Debug\netcoreapp3.1\CloudDemoAPI.MvcApplicationPartsAssemblyInfo.cache
