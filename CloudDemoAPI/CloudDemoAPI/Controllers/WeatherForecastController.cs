@@ -82,7 +82,6 @@ namespace CloudDemoAPI.Controllers
             .ToArray());
         }
 
-
         //https://localhost:44317/api/weatherforecast/search?dayBase=10/10/2020
         [HttpGet]
         [Route("{Search}")]
@@ -111,7 +110,6 @@ namespace CloudDemoAPI.Controllers
             return new JsonResult( CityDataStore.Current._cities
         );
         }
-
 
         //https://localhost:44317/api/weatherforecast/New/CITIES/1
         [HttpGet]
